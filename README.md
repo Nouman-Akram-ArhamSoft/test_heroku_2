@@ -1,5 +1,5 @@
 # ToDoApp-Class-Base-Project
-This is ToDo Class Base view Application on Django 
+This is ToDo Class Base view Application on Django with connection of MySQL
 
 # Setup
 for run the virtual envoirement 
