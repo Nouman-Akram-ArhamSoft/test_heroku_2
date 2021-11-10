@@ -8,9 +8,9 @@ for run the virtual envoirement
 2. .source env/bin/activate
 
 ### For new project:
-4. pip install django (on ubuntu : pip3 install django)
-5. django-admin startproject ToDoProject
-6. ptyhon manage.py startapp ToDoApp
+3. pip install django (on ubuntu : pip3 install django)
+4. django-admin startproject ToDoProject
+5. ptyhon manage.py startapp ToDoApp
 
 ## Run Server Detail:
  command : python manage.py runserver (on ubuntu : python3 manage.py runserver) 
