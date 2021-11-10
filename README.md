@@ -33,7 +33,7 @@ for run the virtual envoirement
  3. Add Task of User
  4. Update Task of User
  5. Delete Task of User
- 6. Retrive the Tasks of specified login user
+ 6. Retrieve the Tasks of specified login user
  
  # for Database Connection to Django:
  
