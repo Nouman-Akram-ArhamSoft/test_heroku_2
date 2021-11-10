@@ -1,0 +1,68 @@
+{% extends 'ToDoApp/login.html' %}
+
+{% block content %}
+
+<div id="login">
+
+    <div class="holder d-flex align-items-center justify-content-center">
+
+        <div class="container">
+
+            <header class="text-center mb-2">
+                <h1 class="display-4">Check list</h1>
+            </header>
+
+            <div class="row">
+                <div class="col-lg-5 mx-auto">
+
+
+                    <div class="card rounded border-0 shadow-sm position-relative">
+                        <div class="card-body p-5">
+                            <div class="d-flex align-items-center mb-4 pb-4 border-bottom"><i
+                                    class="far fa-calendar-alt fa-3x"></i>
+                                <div class="ms-3">
+
+                                    <h3 class="text-uppercase fw-weight-bold mb-0"><b>{{today}}</b></h3>
+
+
+                                    <p class="text-gray fst-italic mb-0">{{my_date}}</p>
+
+                                    <a href="{% url 'ToDoApp:logout' %}" style="margin-left:250px;">
+                                        <button class="btn btn-primary">Logout</button>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div class="form-check mb-3">
+                                {% for task in object_list %}
+                                <input class="form-check-input" id="flexCheck1" type="checkbox" checked>
+                                <label class="form-check-label" for="flexCheck1">
+
+                                    <span class="fst-italic pl-1"> <b> Task {{ forloop.counter }} --> {{ task }}</b></span>
+                                    <br>
+
+                                    <a href="{% url 'ToDoApp:update_task' task.id %}">
+                                        <button style="margin-top:10px" class="btn btn-secondary">
+                                            View
+                                        </button>
+                                    </a>
+
+                                </label>
+                                <br><br>
+                                {% endfor %}
+                            </div>
+                            <a href="{% url 'ToDoApp:create_task' %}">
+                                <button class="btn btn-primary">Add Task</button>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock content %}
+

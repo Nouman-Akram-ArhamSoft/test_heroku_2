@@ -1,0 +1,52 @@
+{% extends 'ToDoApp/login.html' %}
+
+{% block content %}
+<div id="login">
+    <h3 class="text-center text-white pt-5">Delete Confirmation</h3>
+    <div class="container">
+        <div id="login-row" class="row justify-content-center align-items-center">
+            <div id="login-column" class="col-md-6">
+                <div id="login-box" class="col-md-12">
+                    <form id="login-form" class="form" method="post">
+                        {% csrf_token %}
+                        <h2 class="text-center text-info" style="margin-left:-200px">
+
+                        <p>Do you want to Delete Task</p>
+
+                        <div>
+                            <button type="submit" class="btn btn-danger">Yes</button>
+
+                            <a href="{% url 'ToDoApp:task_detail' %}" style="margin-left:300px;">
+                                <button class="btn btn-success" type="button">No</button>
+                            </a>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <p>Do you want to delete task</p>
+        <button type="submit">Yes</button>
+
+
+    </form>
+
+</body>
+</html>
